@@ -14,7 +14,105 @@
 </head>
 <body>
 
-	
+	<div class="container">
+		
+		<div class="jumbotron text-center">
+			<h1>Anyime is Train Time</h1>
+			<h3>Choo Choo. Chee Chee.</h3>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Current Train Schedule</h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-responsive table-hover">
+							<thead>
+								<tr>
+									<th>Train Name</th>
+									<th>Destination</th>
+									<th>Frequency (min)</th>
+									<th>Next Arrival</th>
+									<th>Minutes Away</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Trenton Express</td>
+									<td>Trenton, NJ</td>
+									<td>25</td>
+									<td>05:35 PM</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>Oregon Trail</td>
+									<td>Salem, OR</td>
+									<td>3600</td>
+									<td>01:39 PM</td>
+									<td>1154</td>
+								</tr>
+								<tr>
+									<td>Midnight Carriage</td>
+									<td>Philadelphia, PA</td>
+									<td>15</td>
+									<td>05:35 PM</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>Boston Bus</td>
+									<td>Boston, MA</td>
+									<td>65</td>
+									<td>05:50 PM</td>
+									<td>25</td>
+								</tr>
+								<tr>
+									<td>California Caravan</td>
+									<td>San Francisco, CA</td>
+									<td>6000</td>
+									<td>01:25 AM</td>
+									<td>4740</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Add Train</h3>
+					</div>
+					<div class="panel-body">
+						<form>
+							<div class="form-group">
+								<label for="name-input">Train Name</label>
+    							<input type="text" class="form-control" id="name-input" />
+							</div>
+							<div class="form-group">
+								<label for="destination-input">Destination</label>
+    							<input type="text" class="form-control" id="destination-input" />
+							</div>
+							<div class="form-group">
+								<label for="time-input">First Train Time (HH:MM - Military Time)</label>
+    							<input type="text" class="form-control" id="time-input" />
+							</div>
+							<div class="form-group">
+								<label for="frequency-input">Frequency (min)</label>
+    							<input type="number" class="form-control" id="frequency-input" />
+							</div>
+							<input type="submit" id="submit" class="btn btn-primary" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 <!-- jQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
