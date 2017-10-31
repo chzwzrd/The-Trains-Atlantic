@@ -1,0 +1,56 @@
+{
+  "-Kxkx2UUsUNe39nybTFP" : {
+    "dateAdded" : 1509428574261,
+    "destination" : "Boston, MA",
+    "firstTime" : "02:30 PM",
+    "frequency" : "42",
+    "minutesAway" : 42,
+    "name" : "Boston Bullet",
+    "nextArrival" : "11:24 PM"
+  },
+  "-KxkxE53ctwp-nl8YH53" : {
+    "dateAdded" : 1509428621782,
+    "destination" : "Austin, TX",
+    "firstTime" : "08:05 AM",
+    "frequency" : "10",
+    "minutesAway" : 2,
+    "name" : "Texas Turbo",
+    "nextArrival" : "10:45 PM"
+  },
+  "-KxkxN9CoN05FYMHNZeN" : {
+    "dateAdded" : 1509428658913,
+    "destination" : "Atlanta, GA",
+    "firstTime" : "11:55 PM",
+    "frequency" : "35",
+    "minutesAway" : 31,
+    "name" : "Atlantis",
+    "nextArrival" : "11:15 PM"
+  },
+  "-KxkxWhCxscoUQrGtH2c" : {
+    "dateAdded" : 1509428698015,
+    "destination" : "Hogwarts, Scotland",
+    "firstTime" : "02:25 AM",
+    "frequency" : "90",
+    "minutesAway" : 41,
+    "name" : "Hogwarts Express",
+    "nextArrival" : "11:25 PM"
+  },
+  "-KxkxaoEfRrwhblYKa6J" : {
+    "dateAdded" : 1509428718948,
+    "destination" : "London, UK",
+    "firstTime" : "05:40 AM",
+    "frequency" : "3",
+    "minutesAway" : 1,
+    "name" : "London Licker",
+    "nextArrival" : "10:46 PM"
+  },
+  "-Kxl3DnXcxbteeV5HGwC" : {
+    "dateAdded" : 1509430455600,
+    "destination" : "Maui, Hawaii",
+    "firstTime" : "06:23 PM",
+    "frequency" : "23",
+    "minutesAway" : 4,
+    "name" : "Maui Motion",
+    "nextArrival" : "11:18 PM"
+  }
+}

@@ -1,0 +1,7 @@
+
+Train Name	Destination	Frequency (min)	Next Arrival	Minutes Away
+Boston Bullet	Boston, MA	42	10:30 PM	22
+Texas Turbo	Austin, TX	10	10:15 PM	2
+Atlantis	Trenton, NJ	35	10:50 PM	33
+Hogwarts Express	Hogwarts, Scotland	90	11:20 PM	51
+London Licker	London, UK	3	10:34 PM	2
