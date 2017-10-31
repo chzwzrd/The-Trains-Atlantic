@@ -86,12 +86,12 @@ function initPage(snapshotObject) {
 		});
 
 		// display message on DOM signaling no trains have been added today
-		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------No trains have been added today!----------</td></tr>");
+		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------Add a train!----------</td></tr>");
 
 	} else { 
 
 		// display message on DOM signaling no trains running
-		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------No trains are currently running!----------</td></tr>");
+		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------No trains are currently running----------</td></tr>");
 	}
 
 }
