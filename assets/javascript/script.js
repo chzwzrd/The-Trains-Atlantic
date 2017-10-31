@@ -86,7 +86,7 @@ function initPage(snapshotObject) {
 		});
 
 		// display message on DOM signaling no trains have been added today
-		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------Add a train!----------</td></tr>");
+		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------Fill out the form below to add a train!----------</td></tr>");
 
 	} else { 
 
