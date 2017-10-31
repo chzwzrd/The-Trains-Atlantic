@@ -5,6 +5,9 @@
 		
 	<title>Choo Choo! | Train Scheduler</title>
 
+	<!-- MD Bootstrap CSS -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css"> -->
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
@@ -16,13 +19,17 @@
 
 	<div class="container">
 		
-		<div class="jumbotron text-center">
-			<h1>Anyime is Train Time</h1>
-			<h3>Choo Choo. Chee Chee.</h3>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="jumbotron text-center">
+					<h1>Anyime is Train Time</h1>
+					<h3>Choo Choo. Chee Chee.</h3>
+				</div>
+			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-10 col-sm-offset-1">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h3 class="panel-title">Current Train Schedule</h3>
@@ -39,7 +46,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<!-- <tr>
 									<td>Trenton Express</td>
 									<td>Trenton, NJ</td>
 									<td>25</td>
@@ -73,7 +80,7 @@
 									<td>6000</td>
 									<td>01:25 AM</td>
 									<td>4740</td>
-								</tr>
+								</tr> -->
 							</tbody>
 						</table>
 					</div>
@@ -82,7 +89,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-10 col-sm-offset-1">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h3 class="panel-title">Add Train</h3>
@@ -90,22 +97,23 @@
 					<div class="panel-body">
 						<form>
 							<div class="form-group">
-								<label for="name-input">Train Name</label>
+								<label for="name-input">* Train Name</label>
     							<input type="text" class="form-control" id="name-input" />
 							</div>
 							<div class="form-group">
-								<label for="destination-input">Destination</label>
+								<label for="destination-input">* Destination (City, State)</label>
     							<input type="text" class="form-control" id="destination-input" />
 							</div>
 							<div class="form-group">
-								<label for="time-input">First Train Time (HH:MM - Military Time)</label>
+								<label for="time-input">* First Train Time (Military Time HH:mm)</label>
     							<input type="text" class="form-control" id="time-input" />
 							</div>
 							<div class="form-group">
-								<label for="frequency-input">Frequency (min)</label>
+								<label for="frequency-input">* Frequency (min)</label>
     							<input type="number" class="form-control" id="frequency-input" />
 							</div>
 							<input type="submit" id="submit" class="btn btn-primary" />
+							* indicates required field.
 						</form>
 					</div>
 				</div>
@@ -116,6 +124,9 @@
 
 <!-- jQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Moment.js -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
 
 <!-- Firebase CDN -->
 <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>

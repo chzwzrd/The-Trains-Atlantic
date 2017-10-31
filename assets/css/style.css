@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+
+/*tr:hover th ,
+tr:hover td {
+	background: lightblue;
+}*/
+
+tbody > tr > td:nth-last-child(2),
+tbody > tr > td:last-child {
+	color: blue;
+	font-weight: bold;
+}
+
+#load-message td {
+	color: black;
+	font-weight: bold;
+	font-style: oblique;
+}
