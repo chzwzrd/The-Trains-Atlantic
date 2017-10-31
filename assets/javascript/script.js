@@ -1,14 +1,6 @@
 // Initialize Firebase
 // ====================================================================================
 var config = {
-	// Debugger config
-	// apiKey: "AIzaSyDA6a9b5t8krvtY2xKDtCdAdvmPpBcdrso",
-	// authDomain: "wk-7-hw-debugger-46603.firebaseapp.com",
-	// databaseURL: "https://wk-7-hw-debugger-46603.firebaseio.com",
-	// projectId: "wk-7-hw-debugger-46603",
-	// storageBucket: "",
-	// messagingSenderId: "832423337535"
-
  	// Train scheduler config
  	apiKey: "AIzaSyDnVwcgFzSZpuLFwJpC_076O7jkuvu5Zzo",
 	authDomain: "wk-7-hw-train-scheduler.firebaseapp.com",
@@ -91,12 +83,15 @@ function initPage(snapshotObject) {
 			// display to page (append to table)
 			displayNewRow(trainArray);
 
-		})
+		});
+
+		// display message on DOM signaling no trains have been added today
+		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------No trains have been added today!----------</td></tr>");
 
 	} else { 
 
 		// display message on DOM signaling no trains running
-		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------No trains have been added today!----------</td></tr>");
+		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------No trains are currently running!----------</td></tr>");
 	}
 
 }
