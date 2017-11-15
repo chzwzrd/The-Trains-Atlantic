@@ -8,6 +8,9 @@
 	<!-- MD Bootstrap CSS -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css"> -->
 
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Lobster" rel="stylesheet">
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
@@ -17,20 +20,23 @@
 </head>
 <body>
 
+<!-- <div class="jumbotron text-center">
+	<h1>The Trains-Atlantic</h1>
+</div> -->
+
 	<div class="container">
 		
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<div class="jumbotron text-center">
 					<h1>The Trains-Atlantic</h1>
-					<h3>Chugga chugga choo choo!</h3>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<div class="panel panel-primary">
+				<div class="panel">
 					<div class="panel-heading">
 						<h3 class="panel-title">Current Train Schedule</h3>
 					</div>
@@ -55,30 +61,30 @@
 
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<div class="panel panel-primary">
+				<div class="panel">
 					<div class="panel-heading">
 						<h3 class="panel-title">Add Train</h3>
 					</div>
 					<div class="panel-body">
 						<form>
 							<div class="form-group">
-								<label for="name-input">* Train Name</label>
+								<label for="name-input"><span class="red">*</span> Train Name</label>
     							<input type="text" class="form-control" id="name-input" />
 							</div>
 							<div class="form-group">
-								<label for="destination-input">* Destination (City, Province)</label>
+								<label for="destination-input"><span class="red">*</span> Destination (City, Province)</label>
     							<input type="text" class="form-control" id="destination-input" />
 							</div>
 							<div class="form-group">
-								<label for="time-input">* First Train Time (Military Time HH:mm)</label>
+								<label for="time-input"><span class="red">*</span> First Train Time (Military Time HH:mm)</label>
     							<input type="text" class="form-control" id="time-input" />
 							</div>
 							<div class="form-group">
-								<label for="frequency-input">* Frequency (min)</label>
+								<label for="frequency-input"><span class="red">*</span> Frequency (min)</label>
     							<input type="number" class="form-control" id="frequency-input" />
 							</div>
 							<input type="submit" id="submit" class="btn btn-primary" />
-							* indicates required field.
+							<span class="red">* indicates required field.</span>
 						</form>
 					</div>
 				</div>

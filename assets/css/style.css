@@ -2,14 +2,52 @@
 	box-sizing: border-box;
 }
 
-/*tr:hover th ,
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.jumbotron {
+	background :
+		/* top, transparent red, faked with gradient */
+		linear-gradient(
+			rgba(180, 71, 71, 0.45),
+			rgba(184, 56, 56, 0.45)
+			/* rgba(120, 212, 204, 0.7),
+			rgba(248, 189, 27, 0.7) */
+			/* rgba(247, 188, 26, 0.6) */
+		),
+		/* bottom, image */
+	 	url(
+			"https://orig00.deviantart.net/f4a4/f/2013/258/1/c/gif___sunset_train_by_turst67-d6mdbgy.gif"
+		);
+	background-size: 100% 100%;
+	filter: grayscale(1);
+	color: #fff;
+	text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+h1 {
+	padding-bottom: 17px;
+	font-family: 'Lobster', sans-serif;
+}
+
+.panel {
+	border-color: rgb(95, 206, 191);
+}
+
+.panel-heading {
+	background: rgb(95, 206, 191);
+	color: white;
+}
+
+tr:hover th ,
 tr:hover td {
-	background: lightblue;
-}*/
+	background: rgb(232, 246, 250);
+}
 
 tbody > tr > td:nth-last-child(2),
 tbody > tr > td:last-child {
-	color: blue;
+	color: rgb(13, 13, 243);
 	font-weight: bold;
 }
 
@@ -17,4 +55,29 @@ tbody > tr > td:last-child {
 	color: black;
 	font-weight: bold;
 	font-style: oblique;
+}
+
+input[type="text"] {
+	/* color: rgb(15, 90, 230); */
+}
+
+#submit {
+	background: rgb(95, 206, 191);
+	border: none;
+	margin-right: 5px;
+}
+
+#submit:hover {
+	background: rgb(82, 180, 166);
+}
+
+.red {
+	color: rgb(196, 2, 2);
+	/* color: rgb(15, 90, 230); */
+}
+
+@media screen and (max-width: 544px) {
+	#train-gif {
+		height: 200px;
+	}
 }
