@@ -78,7 +78,13 @@ function initPage(snapshotObject) {
 		snapshotObject.forEach(function(childSnapshot) {
 
 			// make an array for the value of each property in the object
-			var trainArray = [childSnapshot.child("name").val(), childSnapshot.child("destination").val(), childSnapshot.child("frequency").val(), childSnapshot.child("nextArrival").val(), childSnapshot.child("minutesAway").val()];
+			var trainArray = [
+				childSnapshot.child("name").val(), 
+				childSnapshot.child("destination").val(), 
+				childSnapshot.child("frequency").val(), 
+				childSnapshot.child("nextArrival").val(), 
+				childSnapshot.child("minutesAway").val()
+			];
 
 			// display to page (append to table)
 			displayNewRow(trainArray);
@@ -110,6 +116,7 @@ function displayNewRow(array) {
 
 		// append its table data to the virtual row
 		tableRow.append("<td>" + array[i] + "</td>");
+
 	}
 
 	// append the row to the DOM
@@ -146,14 +153,13 @@ function renderInput() {
 	database.ref().push(pushObject);
 
 	// display new info to DOM
+	// 1) make array that will be used as parameter by displayNewRow()
+	var trainArray = [trainName, destination, frequency, nextArrival, minutesAway];
 
-		// 1) make array that will be used as parameter by displayNewRow()
-		var trainArray = [trainName, destination, frequency, nextArrival, minutesAway];
+	// 2) use array to render new row on DOM
+	displayNewRow(trainArray);
 
-		// 2) use array to render new row on DOM
-		displayNewRow(trainArray);
-
-	// clear out form text boxes
+	// clear out form
 
 }
 
@@ -165,6 +171,17 @@ database.ref().once("value", function(snapshot) {
 
 	// initialize train schedule
 	initPage(snapshot);
+
+// error handling
+}, function(err) {
+	console.error(err);
+});
+
+// only console out most recent object from firebase
+database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+
+	// console insight
+	console.log(snapshot.val());
 
 // error handling
 }, function(err) {
