@@ -4,17 +4,17 @@
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
+	color: #474747;
 }
 
 .jumbotron {
 	background :
 		/* top, transparent red, faked with gradient */
 		linear-gradient(
-			rgba(180, 71, 71, 0.45),
-			rgba(184, 56, 56, 0.45)
-			/* rgba(120, 212, 204, 0.7),
-			rgba(248, 189, 27, 0.7) */
-			/* rgba(247, 188, 26, 0.6) */
+			rgba(180, 107, 107, 0.45),
+			rgba(177, 128, 128, 0.45)
+			/* rgba(95, 211, 199, 0.7),
+			rgba(245, 209, 120, 0.7) */
 		),
 		/* bottom, image */
 	 	url(
@@ -42,23 +42,35 @@ h1 {
 
 tr:hover th ,
 tr:hover td {
-	background: rgb(232, 246, 250);
+	/* background: rgb(232, 246, 250); */
+	background: rgba(247, 253, 255, 0.76);
 }
 
 tbody > tr > td:nth-last-child(2),
 tbody > tr > td:last-child {
-	color: rgb(13, 13, 243);
+	/* color: rgb(0, 148, 253); */
+	/* color: rgb(11, 180, 236); */
+	color: rgb(0, 180, 235);
 	font-weight: bold;
 }
 
 #load-message td {
-	color: black;
+	color: #474747;
 	font-weight: bold;
 	font-style: oblique;
 }
 
 input[type="text"] {
 	/* color: rgb(15, 90, 230); */
+	/* color: rgb(28, 157, 255); */
+}
+
+.form-control:focus {
+	border-color: #ddd;
+	box-shadow: inset 1px 1px 4px rgba(186, 234, 253, 0.6),
+	0 0 7px rgba(186, 240, 253, 0.6);
+	/* box-shadow: inset 0 1px 4px rgba(186, 251, 253, 0.6),
+	0 0 7px rgba(186, 251, 253, 0.6); */
 }
 
 #submit {
@@ -72,8 +84,10 @@ input[type="text"] {
 }
 
 .red {
-	color: rgb(196, 2, 2);
-	/* color: rgb(15, 90, 230); */
+	/* color: rgb(196, 2, 2); */
+	/* color: rgb(0, 148, 253); */
+	/* color: rgb(11, 180, 236); */
+	color: rgb(0, 180, 235);
 }
 
 @media screen and (max-width: 544px) {
