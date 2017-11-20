@@ -131,7 +131,7 @@ function renderInput() {
 	trainName = $("#name-input").val();
 	destination = $("#destination-input").val();
 	firstTime = $("#time-input").val();
-	frequency = $("#frequency").val();
+	frequency = $("#frequency-input").val();
 	minutesAway = calcMinAway();
 	nextArrival = calcNextArrival();
 
