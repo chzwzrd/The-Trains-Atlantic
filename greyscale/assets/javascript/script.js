@@ -1,8 +1,8 @@
 // Initialize Firebase
 // ====================================================================================
 var config = {
- 	// Train scheduler config
- 	apiKey: "AIzaSyDnVwcgFzSZpuLFwJpC_076O7jkuvu5Zzo",
+	// Train scheduler config
+	apiKey: "AIzaSyDnVwcgFzSZpuLFwJpC_076O7jkuvu5Zzo",
 	authDomain: "wk-7-hw-train-scheduler.firebaseapp.com",
 	databaseURL: "https://wk-7-hw-train-scheduler.firebaseio.com",
 	projectId: "wk-7-hw-train-scheduler",
@@ -35,6 +35,9 @@ function calcMinAway() {
 
 	// 1) grab first time train arrives
 	firstTime = $("#time-input").val();
+
+	// 2) grab frequency of train
+	frequency = $("#frequency-input").val();
 
 	// 3) grab current time
 	var currentTime = moment();
@@ -76,10 +79,10 @@ function initPage(snapshotObject) {
 
 			// make an array for the value of each property in the object
 			var trainArray = [
-				childSnapshot.child("name").val(), 
-				childSnapshot.child("destination").val(), 
-				childSnapshot.child("frequency").val(), 
-				childSnapshot.child("nextArrival").val(), 
+				childSnapshot.child("name").val(),
+				childSnapshot.child("destination").val(),
+				childSnapshot.child("frequency").val(),
+				childSnapshot.child("nextArrival").val(),
 				childSnapshot.child("minutesAway").val()
 			];
 
@@ -91,7 +94,7 @@ function initPage(snapshotObject) {
 		// display message on DOM signaling no trains have been added today
 		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------Use the form below to add a train----------</td></tr>");
 
-	} else { 
+	} else {
 
 		// display message on DOM signaling no trains running
 		$("tbody").append("<tr id='load-message'><td colspan='5' align='center'>----------No trains are currently running----------</td></tr>");
@@ -120,15 +123,15 @@ function displayNewRow(array) {
 	$("tbody").append(tableRow);
 
 }
-	
+
 // function for when user clicks submit
 function renderInput() {
-	
+
 	// capture all of the input values
 	trainName = $("#name-input").val();
 	destination = $("#destination-input").val();
 	firstTime = $("#time-input").val();
-	frequency = $("#frequency").val();
+	frequency = $("#frequency-input").val();
 	minutesAway = calcMinAway();
 	nextArrival = calcNextArrival();
 
@@ -169,7 +172,7 @@ database.ref().once("value", function(snapshot) {
 	// initialize train schedule
 	initPage(snapshot);
 
-// error handling
+	// error handling
 }, function(err) {
 	console.error(err);
 });
@@ -180,7 +183,7 @@ database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", functi
 	// console insight
 	console.log(snapshot.val());
 
-// error handling
+	// error handling
 }, function(err) {
 	console.error(err);
 });
