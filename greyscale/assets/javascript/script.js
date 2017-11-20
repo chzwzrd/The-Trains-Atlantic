@@ -34,10 +34,7 @@ function civilianTime(time) {
 function calcMinAway() {
 
 	// 1) grab first time train arrives
-	firstTime = $("#time-input").val().trim();
-
-	// 2) grab frequency of train
-	frequency = $("#frequency-input").val().trim();
+	firstTime = $("#time-input").val();
 
 	// 3) grab current time
 	var currentTime = moment();
@@ -128,10 +125,10 @@ function displayNewRow(array) {
 function renderInput() {
 	
 	// capture all of the input values
-	trainName = $("#name-input").val().trim();
-	destination = $("#destination-input").val().trim();
-	firstTime = $("#time-input").val().trim();
-	frequency = $("#frequency").val().trim();
+	trainName = $("#name-input").val();
+	destination = $("#destination-input").val();
+	firstTime = $("#time-input").val();
+	frequency = $("#frequency").val();
 	minutesAway = calcMinAway();
 	nextArrival = calcNextArrival();
 
